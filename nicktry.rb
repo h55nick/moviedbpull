@@ -5,7 +5,10 @@ require 'rainbow'
 
 
 
-conn = PG.connect( :password => 'password',:user => 'postgres', :dbname =>'facebook', :host => 'localhost')
+conn = PG.connect( :password => 'password',:user => 'postgres', :dbname =>'moviez', :host => 'localhost')
+## Connect. (mine needs password and correct user (DONT HACK MY DATABASE!) )
+
+
 conn.exec( "select * from people" ) do |result|
   result.each do |row|
      puts row['a1']
