@@ -6,14 +6,15 @@ require 'json'
 
 def  add_to_movie_table(data)
   conn = PG.connect( :password => 'password',:user => 'postgres', :dbname =>'moviez', :host => 'localhost')
-  ids ="(title,year,rated,released,runtime,genre,director,writer,actors,plot,poster)"
-  hashvalues = data.values.join("','").insert(0, "'").insert(-1,"'")
-  puts data.keys
-  puts hashvalues
+  ids ="(title,year,rated,released,runtime,genre,director,writer,actors,plot,poster,imdbRating,imdbVotes,imdbID,response)"
+  hashvalues = data.values.join('","').insert(0, '"').insert(-1,'"')
+  #puts data.keys
+  #puts hashvalues
   sql = "insert into movies #{ids} values (#{hashvalues})"
   conn.exec(sql)
   conn.close
 end
+
 
 def get_and_input(movie_name) #boolean return that determines if it was added
   #This will get the data via httparty

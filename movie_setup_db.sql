@@ -3,21 +3,21 @@
 create table movies
   (
     id serial8 primary key,
-    title varchar(20) not null,
+    title varchar(50) not null,
     year int4,
-    rated varchar(20),
-    released varchar(20),
-    runtime varchar(20),
-    genre varchar(20),
-    director varchar(20),
-    writer varchar(20),
-    actors varchar(20),
-    plot varchar(30),
-    poster varchar(20),
-    imdbRating varchar(20),
-    imdbVotes varchar(20),
-    imdbID varchar(20),
-    response varchar(20)
+    rated varchar(40),
+    released varchar(40),
+    runtime varchar(40),
+    genre varchar(40),
+    director varchar(40),
+    writer varchar(40),
+    actors varchar(90),
+    plot varchar(1000),
+    poster varchar(201),
+    imdbRating varchar(111),
+    imdbVotes varchar(222),
+    imdbID varchar(333),
+    response varchar(444)
 );
 /*
  ["Title",
