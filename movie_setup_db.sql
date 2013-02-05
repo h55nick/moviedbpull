@@ -1,4 +1,4 @@
-##Works.
+/*Works*/
 
 create table movies
   (
@@ -16,10 +16,8 @@ create table movies
     poster varchar(20),
     imdbRating varchar(20),
     imdbVotes varchar(20),
-    response varchar(20),
-    rel_status varchar(30) ,
-    num_friends int2 default 0,
-    city varchar(30)
+    imdbID varchar(20),
+    response varchar(20)
 );
 /*
  ["Title",
